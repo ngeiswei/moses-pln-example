@@ -1,7 +1,7 @@
 # MOSES PLN synergy demo
 
 Simple demo showing how PLN reasoning can be used to overcome the
-uncertainties resulting from the low number of samples used during
+uncertainties resulting from the low number of samples during
 learning.
 
 ## Run MOSES with the following command
@@ -19,6 +19,9 @@ $ moses \
 ```
 
 ## Load the models and the background knowledge in guile
+
+`moses-model.scm` is actually provided containing the model (with
+indentation + confidence).
 
 ```
 $ guile
@@ -60,7 +63,9 @@ $8 = (SetLink
 
 scheme@(guile-user)> ;; Infer relationships between input and target features
 scheme@(guile-user)> (cog-bind pln-rule-deduction)
+TODO: find out why null strength
 
 scheme@(guile-user)> ;; Infer MOSES model precision
 scheme@(guile-user)> (cog-bind pln-rule-implication-or)
+TODO
 ```
