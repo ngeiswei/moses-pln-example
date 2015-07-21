@@ -46,12 +46,13 @@
 ; Main Formula
 
 (define (simple-deduction-formula sA sB sC sAB sBC)
-	(if
-		(and
-				(>= (consistency1 sA sB sAB) 0)
-				(>= (consistency2 sA sB sAB) 0)
-				(>= (consistency1 sB sC sBC) 0)
-				(>= (consistency2 sB sC sBC) 0))
+	;; (if
+	;; 	(and
+	;; 			(>= (consistency1 sA sB sAB) 0)
+	;; 			(>= (consistency2 sA sB sAB) 0)
+	;; 			(>= (consistency1 sB sC sBC) 0)
+	;; 			(>= (consistency2 sB sC sBC) 0))
+    ;;     1
 		(+ 
 			(* sAB sBC) 
 			(/ 
@@ -59,8 +60,8 @@
 					(- 1 sAB) 
 					(- sC 
 						(* sB sBC))) 
-				(- 1 sB)))
-		0 ))
+				(- 1 sB))))
+		;; 0 ))
 
 ; =============================================================================
 ; Basic find and replace formula
