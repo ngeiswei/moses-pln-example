@@ -5,14 +5,14 @@
            (PredicateNode "take")
            (ListLink
               (QuoteLink (VariableNode "X"))
-              (VariableNode "treatment-1")
+              (PredicateNode "treatment-1")
            )
         )
         (EvaluationLink
            (PredicateNode "take")
            (ListLink
               (QuoteLink (VariableNode "X"))
-              (VariableNode "compound-A")
+              (PredicateNode "compound-A")
            )
         )
      )
@@ -30,15 +30,15 @@
            (EvaluationLink
               (PredicateNode "contain")
               (ListLink
-                 (VariableNode "treatment-1")
-                 (VariableNode "compound-A")
+                 (PredicateNode "treatment-1")
+                 (PredicateNode "compound-A")
               )
            )
            (EvaluationLink
               (PredicateNode "take")
               (ListLink
                  (QuoteLink (VariableNode "X"))
-                 (VariableNode "treatment-1")
+                 (PredicateNode "treatment-1")
               )
            )
         )
@@ -46,7 +46,7 @@
            (PredicateNode "take")
            (ListLink
               (QuoteLink (VariableNode "X"))
-              (VariableNode "compound-A")
+              (PredicateNode "compound-A")
            )
         )
      )
@@ -56,7 +56,7 @@
               (PredicateNode "take")
               (ListLink
                  (VariableNode "X")
-                 (VariableNode "treatment-1")
+                 (PredicateNode "treatment-1")
               )
            )
         )
@@ -64,7 +64,7 @@
            (PredicateNode "take")
            (ListLink
               (VariableNode "X")
-              (VariableNode "compound-A")
+              (PredicateNode "compound-A")
            )
         )
      )
@@ -79,7 +79,7 @@
               (PredicateNode "take")
               (ListLink
                  (QuoteLink (VariableNode "X"))
-                 (VariableNode "treatment-1")
+                 (PredicateNode "treatment-1")
               )
            )
         )
@@ -87,7 +87,7 @@
            (PredicateNode "take")
            (ListLink
               (QuoteLink (VariableNode "X"))
-              (VariableNode "compound-A")
+              (PredicateNode "compound-A")
            )
         )
      )
@@ -96,14 +96,14 @@
            (PredicateNode "take")
            (ListLink
               (VariableNode "X")
-              (VariableNode "treatment-1")
+              (PredicateNode "treatment-1")
            )
         )
         (EvaluationLink
            (PredicateNode "take")
            (ListLink
               (VariableNode "X")
-              (VariableNode "compound-A")
+              (PredicateNode "compound-A")
            )
         )
      )
@@ -187,14 +187,14 @@
               (PredicateNode "take")
               (ListLink
                  (VariableNode "X")
-                 (VariableNode "treatment-1")
+                 (PredicateNode "treatment-1")
               )
            )
            (EvaluationLink
               (PredicateNode "contain")
               (ListLink
                  (VariableNode "treatment-1")
-                 (VariableNode "compound-A")
+                 (PredicateNode "compound-A")
               )
            )
         )
@@ -202,7 +202,7 @@
            (PredicateNode "take")
            (ListLink
               (VariableNode "X")
-              (VariableNode "compound-A")
+              (PredicateNode "compound-A")
            )
         )
      )
@@ -214,9 +214,9 @@
      (AverageLink (stv 0.7 0.6)
         (QuoteLink (VariableNode "X"))
         (ImplicationLink
-           (EvaluationLink
-              (PredicateNode "injury-speed-predicate")
+           (MemberLink
               (QuoteLink (VariableNode "X"))
+              (ConceptNode "injury-recovery-speed-predicates")
            )
            (ImplicationLink
               (PredicateNode "is-well-hydrated")
@@ -225,13 +225,13 @@
         )
      )
      (ImplicationLink (stv 0.7 0.6)
-        (EvaluationLink
-           (PredicateNode "injury-speed-predicate")
-           (VariableNode "recovery-speed-of-injury-alpha")
+        (MemberLink
+           (PredicateNode "recovery-speed-of-injury-alpha")
+           (ConceptNode "injury-recovery-speed-predicates")
         )
         (ImplicationLink
            (PredicateNode "is-well-hydrated")
-           (VariableNode "recovery-speed-of-injury-alpha")
+           (PredicateNode "recovery-speed-of-injury-alpha")
         )
      )
   )
