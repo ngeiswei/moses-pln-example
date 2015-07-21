@@ -145,9 +145,9 @@
 (AverageLink (stv 0.7 0.6)
    (VariableNode "X")
    (ImplicationLink
-      (EvaluationLink
-         (PredicateNode "injury-speed-predicate")
+      (MemberLink
          (VariableNode "X")
+         (ConceptNode "injury-recovery-speed-predicates")
       )
       (ImplicationLink
          (PredicateNode "is-well-hydrated")
@@ -162,8 +162,9 @@
 
 (PredicateNode "recovery-speed-of-injury-alpha" (stv 0.02 0.8))
 
-; recovery-speed-injury-alpha is a injury-recovery-of-speed-predicate
-(EvaluationLink (stv 1 1)
-   (PredicateNode "injury-recovery-speed-predicate")
+; recovery-speed-injury-alpha is in the class
+; injury-recovery-of-speed-predicates
+(MemberLink (stv 1 1)
    (PredicateNode "recovery-speed-of-injury-alpha")
+   (ConceptNode "injury-recovery-speed-predicates")
 )
