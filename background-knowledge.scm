@@ -133,7 +133,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (PredicateNode "eat-lots-fruits-vegetables" (stv 0.07 0.8))
-(PredicateNode "is-well-hydrated" (stv 0.34 0.9))
+;; (PredicateNode "is-well-hydrated" (stv 0.34 0.9))
+(PredicateNode "is-well-hydrated")
 
 ; Individuals that eat a lot of fruits and vegetables are well hydrated
 (ImplicationLink (stv 0.85 0.95)
@@ -142,7 +143,7 @@
 )
 
 ; Being well hydrated tends to speed up injury recovery
-(AverageLink (stv 0.7 0.6)
+(AverageLink (stv 0.6 0.7)
    (VariableNode "X")
    (ImplicationLink
       (MemberLink
@@ -160,7 +161,8 @@
 ;; Background knowledge about the target feature ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(PredicateNode "recovery-speed-of-injury-alpha" (stv 0.02 0.8))
+;; (PredicateNode "recovery-speed-of-injury-alpha" (stv 0.02 0.8))
+(PredicateNode "recovery-speed-of-injury-alpha")
 
 ; recovery-speed-injury-alpha is in the class
 ; injury-recovery-of-speed-predicates

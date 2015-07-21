@@ -28,17 +28,17 @@
      (ImplicationLink
         (AndLink
            (EvaluationLink
-              (PredicateNode "contain")
-              (ListLink
-                 (PredicateNode "treatment-1")
-                 (PredicateNode "compound-A")
-              )
-           )
-           (EvaluationLink
               (PredicateNode "take")
               (ListLink
                  (QuoteLink (VariableNode "X"))
                  (PredicateNode "treatment-1")
+              )
+           )
+           (EvaluationLink
+              (PredicateNode "contain")
+              (ListLink
+                 (PredicateNode "treatment-1")
+                 (PredicateNode "compound-A")
               )
            )
         )
@@ -193,7 +193,7 @@
            (EvaluationLink
               (PredicateNode "contain")
               (ListLink
-                 (VariableNode "treatment-1")
+                 (PredicateNode "treatment-1")
                  (PredicateNode "compound-A")
               )
            )
@@ -211,7 +211,7 @@
 
 (define pln-rule-average-hack
   (BindLink
-     (AverageLink (stv 0.7 0.6)
+     (AverageLink
         (QuoteLink (VariableNode "X"))
         (ImplicationLink
            (MemberLink
@@ -224,7 +224,7 @@
            )
         )
      )
-     (ImplicationLink (stv 0.7 0.6)
+     (ImplicationLink (stv 0.6 0.7)
         (MemberLink
            (PredicateNode "recovery-speed-of-injury-alpha")
            (ConceptNode "injury-recovery-speed-predicates")
