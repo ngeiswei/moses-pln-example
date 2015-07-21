@@ -55,17 +55,34 @@ scheme@(guile-user)> (cog-bind pln-rule-average-hack)
 scheme@(guile-user)> (cog-bind pln-rule-modus-ponens)
 $8 = (SetLink
    ...
-   (ImplicationLink (stv 0.69999999 0.60000002)
-      (PredicateNode "is-well-hydrated" (stv 0.059500001 0.99999982))
-      (PredicateNode "recovery-speed-of-injury-alpha" (stv 0.041650001 0.99999982))
+   (ImplicationLink (stv 0.60000002 0.69999999)
+      (PredicateNode "is-well-hydrated" (stv 0.059500001 0.80000001))
+      (PredicateNode "recovery-speed-of-injury-alpha" (stv 0.055000003 0.80000001))
    )
 )
 
 scheme@(guile-user)> ;; Infer relationships between input and target features
 scheme@(guile-user)> (cog-bind pln-rule-deduction)
-TODO: find out why null strength
+$5 = (SetLink
+   ...
+   (ImplicationLink (stv 0.7279107 0.60000002)
+      (PredicateNode "eat-lots-fruits-vegetables" (stv 0.07 0.80000001))
+      (PredicateNode "recovery-speed-of-injury-alpha" (stv 0.875 0))
+   )
+   (ImplicationLink (stv 0.55000001 0.80000001)
+      (PredicateNode "take-treatment-1" (stv 0.1 0.80000001))
+      (PredicateNode "recovery-speed-of-injury-alpha" (stv 0.875 0))
+   )
+)
 
 scheme@(guile-user)> ;; Infer MOSES model precision
 scheme@(guile-user)> (cog-bind pln-rule-implication-or)
-TODO
-```
+$10 = (SetLink
+   (ImplicationLink (stv 0.78088522 0.69999999)
+      (OrLink
+         (PredicateNode "take-treatment-1" (stv 0.1 0.80000001))
+         (PredicateNode "eat-lots-fruits-vegetables" (stv 0.07 0.80000001))
+      )
+      (PredicateNode "recovery-speed-of-injury-alpha" (stv 0.055000003 0.80000001))
+   )
+   ...
