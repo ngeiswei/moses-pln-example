@@ -55,9 +55,9 @@ scheme@(guile-user)> (cog-bind pln-rule-average-hack)
 scheme@(guile-user)> (cog-bind pln-rule-modus-ponens)
 $8 = (SetLink
    ...
-   (ImplicationLink (stv 0.60000002 0.69999999)
+   (ImplicationLink (stv 0.69999999 0.60000002)
       (PredicateNode "is-well-hydrated" (stv 0.059500001 0.80000001))
-      (PredicateNode "recovery-speed-of-injury-alpha" (stv 0.055000003 0.80000001))
+      (PredicateNode "recovery-speed-of-injury-alpha" (stv 0.80000001 0))
    )
 )
 
@@ -78,11 +78,11 @@ $5 = (SetLink
 scheme@(guile-user)> ;; Infer MOSES model precision
 scheme@(guile-user)> (cog-bind pln-rule-implication-or)
 $10 = (SetLink
-   (ImplicationLink (stv 0.78088522 0.69999999)
+   (ImplicationLink (stv 0.6447677 0.60000002)
       (OrLink
          (PredicateNode "take-treatment-1" (stv 0.1 0.80000001))
          (PredicateNode "eat-lots-fruits-vegetables" (stv 0.07 0.80000001))
       )
-      (PredicateNode "recovery-speed-of-injury-alpha" (stv 0.055000003 0.80000001))
+      (PredicateNode "recovery-speed-of-injury-alpha" (stv 0.80000001 0))
    )
    ...

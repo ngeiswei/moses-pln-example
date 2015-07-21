@@ -224,7 +224,7 @@
            )
         )
      )
-     (ImplicationLink (stv 0.6 0.7)
+     (ImplicationLink (stv 0.7 0.6)
         (MemberLink
            (PredicateNode "recovery-speed-of-injury-alpha")
            (ConceptNode "injury-recovery-speed-predicates")

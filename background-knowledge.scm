@@ -143,7 +143,7 @@
 )
 
 ; Being well hydrated tends to speed up injury recovery
-(AverageLink (stv 0.6 0.7)
+(AverageLink (stv 0.7 0.6)
    (VariableNode "X")
    (ImplicationLink
       (MemberLink
