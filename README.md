@@ -44,9 +44,9 @@ scheme@(guile-user)> (cog-bind pln-rule-eliminate-neutral-element-hack)
 scheme@(guile-user)> (cog-bind pln-rule-eliminate-dangling-junctor-hack)
 scheme@(guile-user)> (cog-bind pln-rule-equivalence-hack)
 $6 = (SetLink
-   (ImplicationLink (stv 0.55000001 0.80000001)
+   (ImplicationLink (stv 1 0.99999982)
       (PredicateNode "take-treatment-1" (stv 0.1 0.80000001))
-      (PredicateNode "recovery-speed-of-injury-alpha" (stv 0.055000003 0.99999982))
+      (PredicateNode "take-compound-A" (stv 0.2 0.80000001))
    )
 )
 
@@ -57,7 +57,7 @@ $8 = (SetLink
    ...
    (ImplicationLink (stv 0.69999999 0.60000002)
       (PredicateNode "is-well-hydrated" (stv 0.059500001 0.99999982))
-      (VariableNode "recovery-speed-of-injury-alpha" (stv 0.041650001 0.99999982))
+      (PredicateNode "recovery-speed-of-injury-alpha" (stv 0.041650001 0.99999982))
    )
 )
 
