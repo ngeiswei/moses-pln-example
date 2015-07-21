@@ -58,7 +58,7 @@
 (define (pln-formula-simple-deduction AB BC AC)
     (cog-set-tv!
         AC
-        (pln-formula-simple-deduction-side-effect-free AB BC AC)
+        (pln-formula-simple-deduction-side-effect-free AB BC)
     )
 )
 
@@ -70,29 +70,29 @@
 ; TODO The confidence calcualtion is not inline with the wiki as the details
 ;      not clearly defined there.
 ; -----------------------------------------------------------------------------
-(define (pln-formula-simple-deduction-side-effect-free AB BC AC)
-    (let
+(define (pln-formula-simple-deduction-side-effect-free AB BC)
+    (let*
         ((sA (cog-stv-strength (gar AB)))
          (sB (cog-stv-strength (gdr AB)))
          (sC (cog-stv-strength (gdr BC)))
          (sAB (cog-stv-strength AB))
          (sBC (cog-stv-strength BC))
-        )
-
-        ; Returns sAC. Includes the consistency conditions
-        (define (strength)
-            (simple-deduction-formula sA sB sC sAB sBC))
-
-        ; This is not consistant with the defintion on the wiki
-        (define (confidence)
-            (min
-                (cog-stv-confidence AB)
-                (cog-stv-confidence BC)
-            )
-        )
-
-        (stv (strength) (confidence))
+         (cAB (cog-stv-confidence AB))
+         (cBC (cog-stv-confidence BC))
+         (strength (simple-deduction-formula sA sB sC sAB sBC))
+         (confidence (min cAB cBC)))
+      (display "sA = ") (display sA)
+      (display ", sB = ") (display sB)
+      (display ", sC = ") (display sC)
+      (display ", sAB = ") (display sAB)
+      (display ", sBC = ") (display sBC)
+      (display ", cAB = ") (display cAB)
+      (display ", cBC = ") (display cBC)
+      (display ", strength = ") (display strength)
+      (display ", confidence = ") (display confidence)
+      (stv strength confidence)
     )
 )
+
 
 ; =============================================================================
