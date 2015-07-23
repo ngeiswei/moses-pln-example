@@ -9,7 +9,7 @@ learning.
 ```
 $ moses \
       --input-file dataset.csv \
-      --target-feature recovery-speed-injury-alpha \
+      --target-feature recovery-speed-of-injury-alpha \
       --output-with-labels 1 \
       --problem pre \
       -q 0.7 \
@@ -64,13 +64,13 @@ $8 = (SetLink
 scheme@(guile-user)> ;; Infer relationships between input and target features
 scheme@(guile-user)> (cog-bind pln-rule-deduction)
 $5 = (SetLink
+   (ImplicationLink (stv 0.55000001 0.80000001)
+      (PredicateNode "take-treatment-1" (stv 0.1 0.80000001))
+      (PredicateNode "recovery-speed-of-injury-alpha" (stv 0.875 0))
+   )
    ...
    (ImplicationLink (stv 0.7279107 0.60000002)
       (PredicateNode "eat-lots-fruits-vegetables" (stv 0.07 0.80000001))
-      (PredicateNode "recovery-speed-of-injury-alpha" (stv 0.875 0))
-   )
-   (ImplicationLink (stv 0.55000001 0.80000001)
-      (PredicateNode "take-treatment-1" (stv 0.1 0.80000001))
       (PredicateNode "recovery-speed-of-injury-alpha" (stv 0.875 0))
    )
 )

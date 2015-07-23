@@ -133,7 +133,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (PredicateNode "eat-lots-fruits-vegetables" (stv 0.07 0.8))
-;; (PredicateNode "is-well-hydrated" (stv 0.34 0.9))
 (PredicateNode "is-well-hydrated")
 
 ; Individuals that eat a lot of fruits and vegetables are well hydrated

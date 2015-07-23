@@ -1,6 +1,6 @@
 ; MOSES model gotten from
 ;
-; moses -i dataset.csv -u recovery-speed-injury-alpha -W 1 -Hpre -q0.7 -p0.5 -c 1 --output-format scheme
+; moses -i dataset.csv -u recovery-speed-of-injury-alpha -W 1 -Hpre -q0.7 -p0.5 -c 1 --output-format scheme
 ;
 ; Wrapped in an ImplicationLink to relate models and target feature +
 ; confidence.

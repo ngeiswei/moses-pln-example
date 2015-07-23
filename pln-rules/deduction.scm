@@ -1,10 +1,14 @@
 ; =============================================================================
 ; Deduction Rule
-; TODO The rule must be applicable to ImplicationLink, SubsetLink and PartOfLink
 ;
-; AND(Implication A B, Implication B C) entails Implication A C
+; A->B
+; B->C
+; |-
+; A->C
 ; -----------------------------------------------------------------------------
+
 (load "formulas.scm")
+
 (define pln-rule-deduction
     (BindLink
         (VariableList
